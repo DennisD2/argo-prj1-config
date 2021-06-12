@@ -18,7 +18,7 @@ spec:
           - "-H"
           - "'Content-Type: application/json'"
           - "--data"
-          - "{\"app\": \"got-dev\", \"repo\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
+          - "{\"app\": \"argo-prj1\", \"repo\": \"https://github.com/DennisD2/argo-prj1.git\", \"config-repo\": \"https://github.com/DennisD2/argo-prj1-config.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
           - "http://192.168.178.44:8080/postSync"
       restartPolicy: Never
   backoffLimit: 2
