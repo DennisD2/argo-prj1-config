@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: app-got-notification-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: got-dev-postsync-notification
+        image: curlimages/curl
+        command:
+          - "curl"
+          - "-X"
+          - "POST"
+          - "-H"
+          - "'Content-Type: application/json'"
+          - "--data"
+          - "{\"app\": \"got-dev\", \"repo\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
+          - "http://192.168.178.44:8080/postSync"
+      restartPolicy: Never
+  backoffLimit: 2
