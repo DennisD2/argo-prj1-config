@@ -7,6 +7,11 @@ spec:
     app: argo-prj1-tuc
   type: NodePort
   ports:
-    - protocol: TCP
+    - name: tcp8080
+      protocol: TCP
       port: 8080
       targetPort: 8080
+    - name: tcp8085
+      protocol: TCP
+      port: 8085
+      targetPort: 8085
