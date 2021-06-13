@@ -18,7 +18,7 @@ spec:
           - "-H"
           - "'Content-Type: application/json'"
           - "--data"
-          - "{\"app\": \"argo-prj1\", \"repo\": \"https://github.com/DennisD2/argo-prj1.git\", \"config-repo\": \"https://github.com/DennisD2/argo-prj1-config.git\", \"branch\": \"tuc\", \"version\": \"1.0.0\", \"reason\": \"postSyncSuccess\"}"
+          - "{\"app\": \"argo-prj1\", \"repo\": \"https://github.com/DennisD2/argo-prj1.git\", \"config-repo\": \"https://github.com/DennisD2/argo-prj1-config.git\", \"branch\": \"tuc\", \"version\": \"1.0.1\", \"reason\": \"postSyncSuccess\"}"
           - "http://192.168.178.44:8080/postSync"
       restartPolicy: Never
   backoffLimit: 2
