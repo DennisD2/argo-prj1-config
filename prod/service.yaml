@@ -7,6 +7,11 @@ spec:
     app: argo-prj1-prod
   type: NodePort
   ports:
-    - protocol: TCP
+    - name: tcp8080
+      protocol: TCP
       port: 8080
       targetPort: 8080
+    - name: tcp8082
+      protocol: TCP
+      port: 8082
+      targetPort: 8082
