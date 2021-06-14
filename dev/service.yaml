@@ -11,7 +11,7 @@ spec:
       protocol: TCP
       port: 8080
       targetPort: 8080
-    - name: tcp8089
+    - name: tcp8081
       protocol: TCP
-      port: 8089
-      targetPort: 8089
+      port: 8081
+      targetPort: 8081
